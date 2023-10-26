@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .expression {
+            color: #666;
+            font-size: 72px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .is {
+            color: #666;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            color: #ff4d4d;
+            font-size: 72px;
+            margin-bottom: 40px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="expression">{{.Expression}}</div>
+        <div class="is">is</div>
+        <div class="result">{{.Result}}</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 50px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff4d4d;
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        button {
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Error!</h1>
+        <p>Something went wrong.</p>
+        <button onclick="history.back()">Go back</button>
+    </div>
+</body>
+</html>

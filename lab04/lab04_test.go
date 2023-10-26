@@ -141,7 +141,7 @@ func TestCalculator(t *testing.T) {
 			t.Fatal(err)
 		}
 		res := httptest.NewRecorder()
-		Lab4(res, req)
+		Calculator(res, req)
 		if res.Code != http.StatusOK {
 			t.Errorf("expected status OK; got %v", res.Code)
 		}

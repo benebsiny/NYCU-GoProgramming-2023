@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        body {
+            font-family: Arial, serif;
+            margin: auto 20px;
+            background-color: #0F0F0F;
+            color: white;
+        }
+
+        .header {
+            height: 56px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+
+        .u-icon {
+            background-color: #666666;
+            padding: 10px;
+            border-radius: 9rem;
+            font-size: 1.5rem
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px
+        }
+
+        .description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            line-height: 3;
+        }
+
+        .button {
+            background-color: #262626;
+            padding: 0 1rem;
+            border-radius: 30px
+        }
+
+        .button:hover {
+            background-color: #4d4d4d;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .comment {
+            font-weight: bold;
+            font-size: 1.5rem
+        }
+    </style>
+    <title>{{ .Title }} - YouTube</title>
+</head>
+<body>
+<div>
+    <div class="header"><i class="fa-brands fa-youtube" style="color:white;"></i>&nbsp;YouTube</div>
+    <div style="display: inline-block;">
+        <iframe width="943" height="530" src="https://www.youtube.com/embed/{{.Id}}" frameborder="0"
+                allowfullscreen></iframe>
+        <div class="title">{{ .Title }}</div>
+
+        <div class="description" style="border-bottom: #666666 1px solid; padding-bottom: 10px">
+            <div class="flex-row">
+                <i class="fa-solid fa-user u-icon"></i>
+                {{.ChannelTitle}}
+                <div class="button">
+                    <i class="fa-regular fa-bell"></i>
+                    已訂閱
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <div class="button"><i class="fa-solid fa-thumbs-up"></i>&nbsp;{{.LikeCount}}</div>
+                <div class="button"><i class="fa-solid fa-share-from-square"></i>&nbsp;分享</div>
+                <div class="button"><i class="fa-solid fa-download"></i>&nbsp;下載</div>
+                <div class="button"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+        </div>
+        <div class="description" style="border-bottom: #666666 1px solid;">
+            <div class="flex-row">
+                <div>觀看次數：{{.ViewCount}}次</div>
+                <div>{{.PublishedAt}}</div>
+            </div>
+        </div>
+        <div class="description">
+            <div class="comment">{{.CommentCount}}&nbsp;則留言</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
